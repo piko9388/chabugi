@@ -46,14 +46,14 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 
 <section class="doc" id="ko" lang="ko">
   <h1>개인정보 처리방침</h1>
-  <p class="meta">앱: 차부기: 전기차 차계부 (iOS) · 시행일: 2026-11-19</p>
+  <p class="meta">앱: 차부기:전기차 차계부 (iOS) · 시행일: 2026-11-20</p>
   <p class="summary">차부기는 개인정보를 수집하지 않습니다. 사용자가 넣은 기록은 사용자의 기기 안에만 저장됩니다.</p>
 
   <h2>1. 수집하는 정보</h2>
   <p>없습니다. 차부기 개발자(이하 「개발자」)는 앱을 통해 어떤 정보도 받지 않습니다.</p>
   <ul>
     <li>계정과 로그인이 없습니다. 이름, 이메일, 전화번호를 묻지 않습니다.</li>
-    <li>개발자가 운영하는 서버가 없습니다. 앱은 네트워크로 자료를 보내거나 받지 않습니다.</li>
+    <li>개발자가 운영하는 서버가 없습니다. 앱은 자료를 인터넷으로 보내거나 받지 않습니다. 설정의 「개인정보 처리방침」과 「지원」 두 링크는 기기의 브라우저로 해당 페이지를 엽니다.</li>
     <li>광고, 분석 도구, 추적 기능이 없습니다. 다른 회사의 수집 도구(SDK)를 넣지 않았습니다.</li>
     <li>위치 정보를 쓰지 않습니다.</li>
   </ul>
@@ -61,20 +61,27 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
   <h2>2. 기기 안에 저장되는 정보</h2>
   <p>사용자가 앱에 직접 넣은 다음 내용은 사용자의 기기 안에만 저장됩니다. 개발자는 이 내용을 볼 수 없습니다.</p>
   <ul>
-    <li>차량 정보: 별명, 차종, 연식, 배터리 용량, 주행거리 등</li>
-    <li>충전 기록: 일시, 충전기 이름, 단가, 충전량, 금액, 주행거리, 메모</li>
-    <li>충전기와 결제 수단 설정: 충전기 이름과 단가, 결제 수단의 이름, 카드사, 할인율과 한도. 카드 번호는 입력받지 않습니다.</li>
+    <li>차량 정보: 별명, 제조사, 모델, 트림, 연식, 배터리 용량, 완충 거리, 등록 시 주행거리, 매각 표시</li>
+    <li>충전 기록: 일시, 장소(집, 회사, 기타, 일회성 가운데 사용자가 고른 구분이며 위치 정보가 아닙니다), 충전기 이름, 단가, 충전량, 총액, 주행거리, 메모, 충전 전후의 배터리 %와 남은 거리, 결제 수단 이름, 할인액, 「이전 충전 누락」 표시</li>
+    <li>충전기와 결제 수단 설정: 충전기의 이름, 장소 구분, 단가 이력. 결제 수단의 종류(관리비 또는 충전카드), 카드사, 이름, 할인율, 기간 한도, 기간. 카드 번호는 입력받지 않습니다.</li>
+    <li>앱 설정: 지난번에 쓴 장소, 충전기, 결제 수단, 그리고 기록할 차량</li>
   </ul>
 
-  <h2>3. 결제 화면 사진 읽기</h2>
-  <p>결제 화면 사진을 고르면 앱이 기기 안에서 글자를 읽어 입력 칸을 채웁니다. 이 과정은 모두 기기 안에서 이뤄지며, 사진과 사진에서 읽은 내용은 기기 밖으로 나가지 않습니다.</p>
-
-  <h2>4. 백업 파일</h2>
+  <h2>3. 백업 사본</h2>
   <ul>
-    <li>앱은 하루에 한 번 기록의 사본(CSV 파일)을 기기 안에 만듭니다. 사본은 파일 앱의 「나의 iPhone › 차부기」 폴더에 있고, 최근 30개만 남습니다.</li>
-    <li>「내보내기」를 누르면 같은 형식의 파일을 사용자가 고른 곳으로 보냅니다. 내보낸 파일이 어디에 보관되고 누구와 공유되는지는 사용자가 정합니다.</li>
-    <li>백업 파일은 사용자의 기기와 파일 앱에만 있습니다. 개발자에게 전송되지 않습니다.</li>
+    <li>앱은 기록의 사본(CSV 파일)을 기기 안의 앱 문서 폴더에 만듭니다. 파일 앱의 「나의 iPhone › 차부기」 폴더에서 볼 수 있습니다. 사본에는 위 2항의 차량, 기록, 충전기, 결제 수단과 앱 설정이 들어 있습니다.</li>
+    <li>매일 사본: 앱을 여는 날 처음 만들고, 앱이 백그라운드로 갈 때 그날 사본을 새 자료로 갱신합니다. 최근 30개만 남깁니다.</li>
+    <li>그 밖의 사본: 「백업」을 누를 때, 「공유」를 누를 때, 「복원」 직전, 기록 수가 줄었을 때 만드는 사본입니다. 매일 사본과 따로 세어 최근 10개만 남깁니다.</li>
+    <li>「공유」를 누르면 그 순간의 자료로 새 사본을 만들어 사용자가 고른 곳으로 보냅니다. 내보낸 파일이 어디에 보관되고 누구와 공유되는지는 사용자가 정합니다.</li>
+    <li>백업 사본은 사용자의 기기와 파일 앱에만 있습니다. 개발자에게 전송되지 않습니다.</li>
     <li>사용자가 iPhone 의 기기 백업(iCloud 백업 또는 컴퓨터 백업)을 켜 두었다면 앱의 자료가 그 백업에 포함될 수 있습니다. 이 백업은 사용자의 Apple 계정과 Apple 의 정책에 따라 관리되며, 개발자는 접근할 수 없습니다.</li>
+  </ul>
+
+  <h2>4. 저장 파일 보관 사본</h2>
+  <ul>
+    <li>앱의 판이 바뀐 첫 실행에서, 앱은 기록이 든 저장 파일을 앱 전용 폴더에 복사해 둡니다. 최근 3벌만 남깁니다. 이 폴더는 파일 앱에서 보이지 않습니다.</li>
+    <li>앱이 저장 파일을 열지 못하면 기록을 지우지 않고 그 파일을 따로 옮겨 둡니다. 사용자가 꺼낼 수 있도록 파일 앱의 「나의 iPhone › 차부기」 폴더 안 「보관_저장파일」 폴더에도 한 벌 복사합니다. 이 폴더는 사용자가 파일 앱에서 직접 볼 수 있고 지울 수 있습니다.</li>
+    <li>이 파일들은 기기 안에만 있고 개발자에게 전송되지 않습니다. 앱을 삭제하면 함께 지워집니다.</li>
   </ul>
 
   <h2>5. 제3자 제공과 처리 위탁</h2>
@@ -82,8 +89,10 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 
   <h2>6. 자료의 삭제</h2>
   <ul>
-    <li>기록은 앱 안에서 언제든지 지울 수 있습니다.</li>
-    <li>앱을 삭제하면 기기 안의 기록과 「나의 iPhone › 차부기」 폴더의 사본이 함께 지워집니다.</li>
+    <li>충전 기록, 충전기, 결제 수단은 앱 안에서 지울 수 있습니다. 기록을 지울 때는 확인 창을 거치며, 지운 기록은 되살릴 수 없습니다.</li>
+    <li>차량은 앱 안에서 지울 수 없고 「매각한 차량」으로 표시만 할 수 있습니다. 차량 정보는 앱을 삭제해야 지워집니다.</li>
+    <li>앱을 삭제하면 기기 안의 기록과 앱 설정, 「나의 iPhone › 차부기」 폴더의 사본(「보관_저장파일」 폴더 포함), 앱 전용 폴더의 저장 파일 보관 사본이 함께 지워집니다.</li>
+    <li>사용자는 파일 앱에서 「나의 iPhone › 차부기」 폴더의 사본과 「보관_저장파일」 폴더를 직접 지울 수도 있습니다.</li>
     <li>다른 곳으로 내보낸 파일은 그 파일을 둔 곳에서 사용자가 직접 지웁니다.</li>
   </ul>
 
@@ -102,14 +111,14 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 
 <section class="doc" id="en" lang="en">
   <h1>Privacy Policy</h1>
-  <p class="meta">App: CarTally: EV Cost Tracker (iOS) · Effective date: 2026-11-19</p>
+  <p class="meta">App: 차부기:전기차 차계부 (“CarTally”, iOS) · Effective date: 2026-11-20 · Version 1.0 is Korean-language and Korean App Store only.</p>
   <p class="summary">CarTally does not collect any personal data. Everything you enter stays on your device.</p>
 
   <h2>1. Data we collect</h2>
   <p>None. The developer of CarTally (“the developer”) receives no data through the app.</p>
   <ul>
     <li>There is no account and no sign-in. The app never asks for your name, email address, or phone number.</li>
-    <li>The developer runs no server. The app does not send or receive data over the network.</li>
+    <li>The developer runs no server. The app does not send or receive your data over the internet. The two links in Settings, 「개인정보 처리방침」 (Privacy Policy) and 「지원」 (Support), open those pages in your device’s browser.</li>
     <li>There are no ads, no analytics tools, and no tracking. The app includes no third-party data collection SDKs.</li>
     <li>The app does not use your location.</li>
   </ul>
@@ -117,20 +126,27 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
   <h2>2. Data stored on your device</h2>
   <p>The following information, which you enter yourself, is stored only on your device. The developer cannot see it.</p>
   <ul>
-    <li>Vehicle details: nickname, model, model year, battery capacity, odometer readings, and similar details</li>
-    <li>Charging records: date and time, charger name, unit price, energy charged, amount, odometer reading, notes</li>
-    <li>Charger and payment settings: charger names and unit prices; payment method names, card issuer, discount rate and cap. The app never asks for a card number.</li>
+    <li>Vehicle details: nickname, make, model, trim, model year, battery capacity, full-charge range, odometer reading at registration, sold flag</li>
+    <li>Charging records: date and time, place (home, work, other, or one-off, a category you pick; it is not location data), charger name, unit price, energy charged, amount, odometer reading, notes, battery % and remaining range before and after charging, payment method name, discount amount, and the “missed previous charge” flag</li>
+    <li>Charger and payment settings: charger names, place categories and price history; payment method type (maintenance fee or charging card), card issuer, name, discount rate, period cap and period. The app never asks for a card number.</li>
+    <li>App settings: the place, charger and payment method you used last time, and the vehicle you are recording for</li>
   </ul>
 
-  <h2>3. Reading a payment screenshot</h2>
-  <p>When you choose a photo of a payment screen, the app reads the text on your device and fills in the entry fields. All of this happens on the device. The photo and the text read from it never leave your device.</p>
-
-  <h2>4. Backup files</h2>
+  <h2>3. Backup copies</h2>
   <ul>
-    <li>Once a day, the app saves a copy of your records (a CSV file) on your device. The copies are in the Files app under “On My iPhone › CarTally”, and only the 30 most recent are kept.</li>
-    <li>When you tap Export, the app hands a file in the same format to the destination you choose. Where that file is kept and who it is shared with is up to you.</li>
-    <li>Backup files exist only on your device and in the Files app. They are not sent to the developer.</li>
+    <li>The app saves copies of your records (CSV files) in its documents folder on your device. You can see them in the Files app under “On My iPhone › 차부기”. A copy contains the vehicles, records, chargers, payment methods and app settings listed in section 2.</li>
+    <li>Daily copy: created the first time you open the app each day, and refreshed with your latest data when the app goes to the background. Only the 30 most recent are kept.</li>
+    <li>Other copies: made when you tap 「백업」 (Back up) or 「공유」 (Share), just before a 「복원」 (Restore), and when the record count has dropped. They are counted separately from daily copies, and only the 10 most recent are kept.</li>
+    <li>When you tap 「공유」 (Share), the app makes a new copy from your data at that moment and hands it to the destination you choose. Where that file is kept and who it is shared with is up to you.</li>
+    <li>Backup copies exist only on your device and in the Files app. They are not sent to the developer.</li>
     <li>If you have turned on device backup for your iPhone (iCloud Backup or a backup to a computer), the app’s data may be included in that backup. That backup is managed under your Apple Account and Apple’s policies, and the developer has no access to it.</li>
+  </ul>
+
+  <h2>4. Saved copies of the data file</h2>
+  <ul>
+    <li>On the first launch after the app’s version changes, the app copies the data file that holds your records into a folder private to the app, and keeps the 3 most recent. That folder is not visible in the Files app.</li>
+    <li>If the app cannot open its data file, it does not delete your records. It moves that file aside, and also copies it into the folder 「보관_저장파일」 inside “On My iPhone › 차부기” so you can take it out. You can see and delete that folder yourself in the Files app.</li>
+    <li>These files stay on your device and are not sent to the developer. Deleting the app removes them.</li>
   </ul>
 
   <h2>5. Sharing with third parties</h2>
@@ -138,8 +154,10 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 
   <h2>6. Deleting your data</h2>
   <ul>
-    <li>You can delete records in the app at any time.</li>
-    <li>Deleting the app removes the records on the device together with the copies in the “On My iPhone › CarTally” folder.</li>
+    <li>You can delete charging records, chargers and payment methods inside the app. Deleting a record asks for confirmation, and a deleted record cannot be restored.</li>
+    <li>A vehicle cannot be deleted inside the app; you can only mark it as sold (「매각한 차량」). Vehicle details are removed when you delete the app.</li>
+    <li>Deleting the app removes the records and app settings on the device, the copies in the “On My iPhone › 차부기” folder (including 「보관_저장파일」), and the saved copies of the data file in the app’s private folder.</li>
+    <li>You can also delete the copies in “On My iPhone › 차부기” and the 「보관_저장파일」 folder yourself in the Files app.</li>
     <li>Files you exported elsewhere remain where you put them until you delete them yourself.</li>
   </ul>
 

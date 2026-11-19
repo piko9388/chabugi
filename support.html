@@ -46,29 +46,40 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 
 <section class="doc" id="ko" lang="ko">
   <h1>차부기 지원</h1>
-  <p class="meta">자주 묻는 질문과 문의처입니다.</p>
+  <p class="meta">자주 묻는 질문과 문의처입니다. 버튼 이름은 앱 화면의 글자 그대로 「 」 안에 적었습니다.</p>
 
   <details open>
     <summary>기록을 고치거나 지우려면 어떻게 하나요?</summary>
     <div>
+      <p>아래 탭에서 「기록」을 엽니다. 기록은 달마다 묶여 있고, 달 머리글에 그 달의 합계가 보입니다.</p>
+      <p><strong>고치기:</strong> 고칠 기록을 누르면 「충전 기록 수정」 창이 열립니다. 내용과 날짜를 바꾼 뒤 아래의 「8,400원 저장」처럼 금액이 적힌 버튼을 누릅니다. 홈의 「최근 기록」에서 줄을 눌러도 같은 창이 열립니다.</p>
+      <p><strong>지우기:</strong> 두 가지 길이 있습니다.</p>
       <ol>
-        <li>아래 탭에서 「기록」을 엽니다. 기록은 달마다 묶여 있습니다.</li>
-        <li>고칠 기록을 누르면 내용과 날짜를 바꿀 수 있습니다.</li>
-        <li>지우려면 기록을 왼쪽으로 밀어 「삭제」를 누릅니다. 확인 창에서 한 번 더 「삭제」를 누르면 지워지고, 지운 기록은 되살릴 수 없습니다.</li>
+        <li>「기록」 탭에서 기록을 왼쪽으로 밀어 「삭제」를 누릅니다.</li>
+        <li>「충전 기록 수정」 창을 열고 맨 아래의 「기록 삭제」를 누릅니다.</li>
       </ol>
-      <p>기록을 고치면 홈의 이번 달 쓴 돈과 전비도 다시 계산됩니다.</p>
+      <p>두 길 모두 확인 창이 한 번 더 뜨고, 확인 창에서 「삭제」를 누르면 지워집니다. 지운 기록은 되살릴 수 없습니다.</p>
+      <p>기록을 고치거나 지우면 홈의 이번 달 쓴 돈, 원/km, 전비도 다시 계산됩니다.</p>
     </div>
   </details>
 
   <details>
     <summary>백업은 어떻게 되나요?</summary>
     <div>
-      <p>따로 할 일은 없습니다. 앱을 여는 날마다 그날의 사본(CSV 파일)이 하나 만들어지고, 최근 30개가 남습니다.</p>
+      <p>따로 할 일은 없습니다. 앱이 기기 안에 사본(CSV 파일)을 만들어 둡니다. 사본은 두 종류이고, 개수 한도를 따로 셉니다.</p>
       <ul>
+        <li><strong>매일 사본:</strong> 앱을 여는 날 처음 만들고, 앱이 백그라운드로 갈 때 그날 사본을 새 자료로 갱신합니다. 최근 30개가 남습니다.</li>
+        <li><strong>그 밖의 사본:</strong> 「백업」을 누를 때, 「공유」를 누를 때, 「복원」 직전, 기록 수가 줄었을 때(파일 이름에 「기록감소」) 만듭니다. 최근 10개가 남습니다.</li>
+        <li>한도를 넘으면 오래된 사본부터 지워집니다.</li>
         <li>사본 위치: 파일 앱 › 나의 iPhone › 차부기</li>
-        <li>바로 사본을 만들려면: 설정 › 백업 › 「지금 사본 만들기」</li>
-        <li>다른 곳에 보관하려면: 설정 › 백업 › 「내보내기」로 원하는 곳에 저장합니다.</li>
       </ul>
+      <p>설정 탭의 「백업」 칸에는 세 버튼이 있습니다.</p>
+      <ul>
+        <li>「백업」: 지금 자료로 사본을 하나 만듭니다.</li>
+        <li>「공유」: 누르는 순간의 자료로 새 사본을 만들어 공유 화면을 엽니다. iCloud Drive 에 저장하거나 AirDrop 으로 보내는 식으로 다른 곳에 보관할 수 있습니다.</li>
+        <li>「복원」: 백업 파일을 고르면 지금 자료를 그 파일 내용으로 바꿉니다(아래 질문).</li>
+      </ul>
+      <p>앱을 삭제하면 「나의 iPhone › 차부기」 폴더의 사본도 함께 지워집니다. 오래 보관하려면 「공유」로 다른 곳에 따로 저장해 주십시오.</p>
     </div>
   </details>
 
@@ -76,11 +87,11 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <summary>백업 파일을 되가져오려면 어떻게 하나요?</summary>
     <div>
       <ol>
-        <li>설정 › 백업 › 「가져오기」를 누르고 백업 파일을 고릅니다.</li>
-        <li>파일에 든 차량 수, 기록 수, 금액 합계가 확인 창에 보입니다.</li>
-        <li>「바꾸기」를 누르면 지금 자료가 파일 내용으로 바뀝니다.</li>
+        <li>설정 › 백업 › 「복원」을 누르고 백업 파일을 고릅니다.</li>
+        <li>확인 창에 파일에 든 차량, 기록, 충전기, 결제 수단의 개수와 금액 합계가 보입니다.</li>
+        <li>확인 창에서 「복원」을 누르면 지금 자료가 파일 내용으로 바뀝니다. 마음이 바뀌면 「취소」를 누릅니다.</li>
       </ol>
-      <p>가져오기는 지금 자료에 더하는 것이 아니라 파일 내용으로 바꾸는 것입니다. 바꾸기 전에 지금 자료의 안전 사본이 자동으로 만들어지므로, 잘못 가져왔다면 그 사본을 다시 가져오면 됩니다. 읽을 수 없는 파일은 가져오지 않고 지금 자료를 그대로 둡니다.</p>
+      <p>복원은 지금 자료에 더하는 것이 아니라 파일 내용으로 바꾸는 것입니다. 바꾸기 전에 지금 자료의 안전 사본이 자동으로 만들어지고 파일 이름에 「가져오기전」이 붙습니다. 잘못 가져왔다면 그 사본을 다시 복원하면 됩니다. 읽을 수 없는 파일은 가져오지 않고 지금 자료를 그대로 둡니다. 복원 도중 오류가 나면 앱이 안전 사본으로 되돌립니다.</p>
     </div>
   </details>
 
@@ -88,32 +99,48 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <summary>기기를 바꿀 때는 어떻게 옮기나요?</summary>
     <div>
       <ol>
-        <li>쓰던 기기에서 설정 › 백업 › 「내보내기」를 누르고, 파일을 iCloud Drive 에 저장하거나 AirDrop 으로 새 기기에 보냅니다.</li>
+        <li>쓰던 기기에서 설정 › 백업 › 「공유」를 누르고, 파일을 iCloud Drive 에 저장하거나 AirDrop 으로 새 기기에 보냅니다.</li>
         <li>새 기기에 차부기를 설치합니다.</li>
-        <li>새 기기에서 설정 › 백업 › 「가져오기」로 그 파일을 고릅니다.</li>
+        <li>새 기기에서 앱을 처음 열면 나오는 차량 등록 화면 맨 위의 「백업 복원」으로 그 파일을 고릅니다. 이미 차량을 등록했다면 설정 › 백업 › 「복원」을 씁니다.</li>
       </ol>
-      <p>차부기에는 계정이 없어서 기기 사이에 자동으로 맞춰지지 않습니다. 앱을 지우면 「나의 iPhone › 차부기」 폴더의 사본도 함께 지워지므로, 앱을 지우거나 기기를 초기화하기 전에 먼저 내보내 주십시오.</p>
+      <p>차부기에는 계정이 없어서 기기 사이에 자동으로 맞춰지지 않습니다. 앱을 지우면 「나의 iPhone › 차부기」 폴더의 사본도 함께 지워지므로, 앱을 지우거나 기기를 초기화하기 전에 먼저 「공유」로 내보내 주십시오.</p>
     </div>
   </details>
 
   <details>
     <summary>내 기록은 어디에 저장되나요?</summary>
     <div>
-      <p>사용하는 기기 안에만 저장됩니다. 차부기에는 계정, 서버, 광고, 분석 도구가 없고, 네트워크와 위치를 쓰지 않습니다. 개발자는 사용자의 기록을 볼 수 없습니다. 자세한 내용은 <a href="privacy.html#ko">개인정보 처리방침</a>에 있습니다.</p>
+      <p>사용하는 기기 안에만 저장됩니다. 차부기에는 계정, 서버, 광고, 분석 도구가 없고, 위치를 쓰지 않으며, 자료를 인터넷으로 보내거나 받지 않습니다. 설정 맨 아래의 「개인정보 처리방침」과 「지원」 두 링크만 기기의 브라우저로 해당 페이지를 엽니다. 개발자는 사용자의 기록을 볼 수 없습니다. 자세한 내용은 <a href="privacy.html#ko">개인정보 처리방침</a>에 있습니다.</p>
     </div>
   </details>
 
   <details>
     <summary>충전 단가가 바뀌면 어떻게 하나요?</summary>
     <div>
-      <p>설정 › 충전기 설정에서 그 충전기의 단가 숫자만 고치면 됩니다. 고친 날부터 새 단가가 적용되고, 지난 기록의 금액은 그때 단가 그대로 남습니다. 한 번만 다른 단가로 충전했다면 충전 입력 칸에서 단가를 바꾸면 그 기록에만 적용됩니다.</p>
+      <p>설정 › 충전기 설정에서 그 충전기의 줄을 눌러 단가 숫자만 고치고 「저장」을 누릅니다. 고친 날부터 새 단가가 적용되고, 지난 기록의 금액은 그때 단가 그대로 남습니다. 한 번만 다른 단가로 충전했다면 충전 입력 칸에서 단가를 바꾸면 그 기록에만 적용됩니다.</p>
     </div>
   </details>
 
   <details>
-    <summary>결제 화면 사진으로 입력할 수 있나요?</summary>
+    <summary>충전기, 결제 수단, 차량은 지울 수 있나요?</summary>
     <div>
-      <p>충전을 기록할 때 결제 화면 사진을 고르면 앱이 사진의 글자를 읽어 입력 칸을 채웁니다. 읽은 값이 맞는지 확인한 뒤 저장해 주십시오. 사진은 기기 안에서만 읽고, 기기 밖으로 나가지 않습니다.</p>
+      <ul>
+        <li>충전기는 설정 › 충전기 설정에서, 결제 수단은 설정 › 결제 수단에서 지울 수 있습니다. 지운 충전기와 결제 수단이 들어 있던 지난 기록은 그때 이름 그대로 남습니다.</li>
+        <li>차량은 지울 수 없습니다. 쓰지 않는 차량은 설정에서 그 차량을 열어 「매각한 차량」을 켜면 기록과 함께 보관됩니다. 차량 정보를 완전히 없애려면 앱을 삭제해야 합니다.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>「저장소 오류」 화면이 떴습니다. 어떻게 하나요?</summary>
+    <div>
+      <p>앱이 기록이 든 저장 파일을 열지 못했을 때 나오는 화면입니다. 이 화면에서 앱은 기록을 지우지 않습니다. 저장 파일을 따로 옮겨 두고, 「옮긴 저장 파일」 줄에 그 파일 이름을 보여 줍니다. 복사에 성공하면 「꺼낼 수 있는 사본」 줄에 파일 앱 › 나의 iPhone › 차부기 › 보관_저장파일 이 보입니다.</p>
+      <ol>
+        <li>기록은 지워지지 않고 보관되어 있습니다. 앱을 지우지 마십시오. 앱을 지우면 보관된 파일도 함께 지워집니다.</li>
+        <li>파일 앱의 「보관_저장파일」 폴더를 지우지 말고, 이 페이지 맨 아래 메일 주소로 문의해 주십시오. 화면의 「지원」 줄로도 이 페이지에 올 수 있습니다.</li>
+        <li>백업 사본이 있으면 같은 화면 아래 「백업」 칸의 「복원」으로 사본을 고릅니다. 이 화면이 떠 있는 동안 앱은 이미 있는 오늘 사본을 빈 자료로 덮어쓰지 않습니다.</li>
+        <li>「닫기」를 누르면 평소 화면으로 갑니다.</li>
+      </ol>
     </div>
   </details>
 
@@ -122,29 +149,40 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 
 <section class="doc" id="en" lang="en">
   <h1>CarTally Support</h1>
-  <p class="meta">Frequently asked questions and contact.</p>
+  <p class="meta">Frequently asked questions and contact. Version 1.0 is Korean-language, so button names are written as they appear in the app (Korean, in 「 」) with an English gloss.</p>
 
   <details open>
     <summary>How do I edit or delete a record?</summary>
     <div>
+      <p>Open the 「기록」 (Records) tab. Records are grouped by month, and each month header shows that month’s total.</p>
+      <p><strong>Edit:</strong> tap a record to open the 「충전 기록 수정」 (Edit charging record) sheet, change the details or date, and tap the button at the bottom that shows the amount, such as 「8,400원 저장」 (Save 8,400 won). Tapping a row under 「최근 기록」 (Recent records) on Home opens the same sheet.</p>
+      <p><strong>Delete:</strong> there are two ways.</p>
       <ol>
-        <li>Open the Records tab. Records are grouped by month.</li>
-        <li>Tap a record to change its details or its date.</li>
-        <li>To delete, swipe the record to the left and tap Delete, then confirm. A deleted record cannot be restored.</li>
+        <li>In the 「기록」 (Records) tab, swipe the record to the left and tap 「삭제」 (Delete).</li>
+        <li>Open the 「충전 기록 수정」 sheet and tap 「기록 삭제」 (Delete record) at the very bottom.</li>
       </ol>
-      <p>When you edit a record, this month’s spending and efficiency on the Home tab are recalculated.</p>
+      <p>Both ways show a confirmation; tap 「삭제」 (Delete) there to delete. A deleted record cannot be restored.</p>
+      <p>When you edit or delete a record, this month’s spending, cost per km and efficiency on Home are recalculated.</p>
     </div>
   </details>
 
   <details>
     <summary>How does backup work?</summary>
     <div>
-      <p>You don’t have to do anything. On each day you open the app, it saves one copy of your records (a CSV file) and keeps the 30 most recent.</p>
+      <p>You don’t have to do anything. The app keeps copies (CSV files) on your device. There are two kinds, each with its own limit.</p>
       <ul>
-        <li>Where the copies are: Files app › On My iPhone › CarTally</li>
-        <li>To make a copy right now: Settings › Backup › Make a copy now</li>
-        <li>To keep a copy somewhere else: Settings › Backup › Export, then save it wherever you like.</li>
+        <li><strong>Daily copy:</strong> created the first time you open the app each day, and refreshed with your latest data when the app goes to the background. The 30 most recent are kept.</li>
+        <li><strong>Other copies:</strong> made when you tap 「백업」 (Back up) or 「공유」 (Share), just before a 「복원」 (Restore), and when the record count has dropped (the file name contains 「기록감소」). The 10 most recent are kept.</li>
+        <li>When a limit is exceeded, the oldest copies are deleted first.</li>
+        <li>Where the copies are: Files app › On My iPhone › 차부기</li>
       </ul>
+      <p>The 「백업」 (Backup) section of the 「설정」 (Settings) tab has three buttons:</p>
+      <ul>
+        <li>「백업」 (Back up): saves a copy from your current data.</li>
+        <li>「공유」 (Share): makes a new copy from your data at the moment you tap it and opens the share sheet. Save it to iCloud Drive or send it by AirDrop to keep it somewhere else.</li>
+        <li>「복원」 (Restore): choose a backup file to replace your current data with its contents (see the next question).</li>
+      </ul>
+      <p>Deleting the app also removes the copies in the “On My iPhone › 차부기” folder. To keep a copy long-term, save one elsewhere with 「공유」 (Share).</p>
     </div>
   </details>
 
@@ -152,11 +190,11 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <summary>How do I restore from a backup file?</summary>
     <div>
       <ol>
-        <li>Go to Settings › Backup › Import and choose a backup file.</li>
-        <li>A confirmation shows the number of vehicles and records in the file and the total amount.</li>
-        <li>Tap Replace to replace your current data with the contents of the file.</li>
+        <li>Go to 「설정」 (Settings) › 「백업」 (Backup) › 「복원」 (Restore) and choose a backup file.</li>
+        <li>A confirmation shows the number of vehicles, records, chargers and payment methods in the file, and the total amount.</li>
+        <li>Tap 「복원」 (Restore) in the confirmation to replace your current data with the contents of the file. Tap 「취소」 (Cancel) to stop.</li>
       </ol>
-      <p>Importing replaces your current data; it does not merge. Before replacing, the app automatically saves a safety copy of your current data, so if you imported the wrong file you can import that copy again. A file that can’t be read is not imported, and your current data is left untouched.</p>
+      <p>Restoring replaces your current data; it does not merge. Before replacing, the app automatically saves a safety copy of your current data, and its file name gets 「가져오기전」 added. If you restored the wrong file, restore that copy. A file that can’t be read is not imported, and your current data is left untouched. If an error occurs during the restore, the app rolls back to the safety copy.</p>
     </div>
   </details>
 
@@ -164,32 +202,48 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <summary>How do I move my records to a new device?</summary>
     <div>
       <ol>
-        <li>On your old device, go to Settings › Backup › Export and save the file to iCloud Drive or send it to the new device with AirDrop.</li>
-        <li>Install CarTally on the new device.</li>
-        <li>On the new device, go to Settings › Backup › Import and choose that file.</li>
+        <li>On your old device, go to 「설정」 (Settings) › 「백업」 (Backup) › 「공유」 (Share) and save the file to iCloud Drive or send it to the new device with AirDrop.</li>
+        <li>Install the app on the new device.</li>
+        <li>On first launch, the vehicle registration screen has 「백업 복원」 (Restore backup) at the very top; choose that file there. If you have already registered a vehicle, use 「설정」 › 「백업」 › 「복원」 (Restore) instead.</li>
       </ol>
-      <p>CarTally has no account, so devices don’t sync automatically. Deleting the app also removes the copies in the “On My iPhone › CarTally” folder, so export first before you delete the app or erase the device.</p>
+      <p>The app has no account, so devices don’t sync automatically. Deleting the app also removes the copies in the “On My iPhone › 차부기” folder, so export with 「공유」 (Share) before you delete the app or erase the device.</p>
     </div>
   </details>
 
   <details>
     <summary>Where are my records stored?</summary>
     <div>
-      <p>Only on the device you use. CarTally has no account, no server, no ads, and no analytics, and it doesn’t use the network or your location. The developer cannot see your records. See the <a href="privacy.html#en">Privacy Policy</a> for details.</p>
+      <p>Only on the device you use. The app has no account, no server, no ads, and no analytics, it doesn’t use your location, and it doesn’t send or receive your data over the internet. Only the two links at the bottom of Settings, 「개인정보 처리방침」 (Privacy Policy) and 「지원」 (Support), open those pages in your device’s browser. The developer cannot see your records. See the <a href="privacy.html#en">Privacy Policy</a> for details.</p>
     </div>
   </details>
 
   <details>
     <summary>What if my charging rate changes?</summary>
     <div>
-      <p>In Settings › Chargers, just change the unit price for that charger. The new price applies from the day you change it, and past records keep the amount calculated at the old price. If you paid a different rate just once, change the unit price in the entry form and it applies to that record only.</p>
+      <p>In 「설정」 (Settings) › 「충전기 설정」 (Charger settings), tap that charger’s row, change the unit price and tap 「저장」 (Save). The new price applies from the day you change it, and past records keep the amount calculated at the old price. If you paid a different rate just once, change the unit price in the entry form and it applies to that record only.</p>
     </div>
   </details>
 
   <details>
-    <summary>Can I fill in a record from a payment screenshot?</summary>
+    <summary>Can I delete a charger, a payment method, or a vehicle?</summary>
     <div>
-      <p>When logging a charge, choose a photo of the payment screen and the app reads the text to fill in the fields. Check the values before you save. The photo is read on your device only and never leaves it.</p>
+      <ul>
+        <li>Chargers can be deleted in 「설정」 › 「충전기 설정」 (Charger settings), and payment methods in 「설정」 › 「결제 수단」 (Payment methods). Past records that used a deleted charger or payment method keep the name they had at the time.</li>
+        <li>A vehicle cannot be deleted. For a vehicle you no longer use, open it in Settings and turn on 「매각한 차량」 (Sold vehicle); it is kept together with its records. To remove vehicle details completely, delete the app.</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>A 「저장소 오류」 (Storage error) screen appeared. What should I do?</summary>
+    <div>
+      <p>This screen appears when the app could not open the data file that holds your records. The app does not delete your records here. It moves the data file aside and shows its name on the 「옮긴 저장 파일」 (Moved data file) line. If the copy succeeded, the 「꺼낼 수 있는 사본」 (Copy you can take out) line shows Files app › On My iPhone › 차부기 › 보관_저장파일.</p>
+      <ol>
+        <li>Your records are kept, not deleted. Please do not delete the app; deleting it also deletes the kept files.</li>
+        <li>Do not delete the 「보관_저장파일」 folder, and write to the address at the bottom of this page. The 「지원」 (Support) line on that screen also leads to this page.</li>
+        <li>If you have a backup copy, choose it with 「복원」 (Restore) in the 「백업」 (Backup) section lower on the same screen. While this screen is showing, the app does not overwrite an existing copy from today with empty data.</li>
+        <li>Tap 「닫기」 (Close) to go to the normal screen.</li>
+      </ol>
     </div>
   </details>
 
