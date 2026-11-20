@@ -67,7 +67,17 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <li>앱 설정: 지난번에 쓴 장소, 충전기, 결제 수단, 그리고 기록할 차량</li>
   </ul>
 
-  <h2>3. 백업 사본</h2>
+  <h2>3. 결제 화면 사진</h2>
+  <p>충전 입력 화면의 「사진」 줄은 결제 화면 캡처에서 읽은 값으로 입력 칸을 채우는 기능입니다. 사용자가 「사진」 줄을 눌러 사진 한 장을 고를 때만 동작합니다.</p>
+  <ul>
+    <li>사진은 iOS 의 시스템 사진 선택 창으로 고릅니다. 이 창은 앱 밖에서 돌아가므로 앱은 사진 보관함 접근 권한을 요청하지 않으며, 앱에는 사용자가 고른 사진 한 장만 전달됩니다. 카메라 촬영은 없습니다.</li>
+    <li>사진 속 글자는 기기 안에서 읽습니다(기기 안 글자 인식과 앱의 규칙). Apple Intelligence 를 쓸 수 있는 기기(iOS 26 이상, 기기 안 AI 모델 사용 가능)에서는 규칙이 읽지 못한 칸에 한해 기기 안 AI 모델도 이 글자를 읽습니다. 이 모델도 기기 안에서 동작합니다.</li>
+    <li>사진과 읽은 글자는 기기 밖으로 나가지 않습니다. 개발자나 다른 회사의 서버로 보내지 않으며, 앱은 이 기능에서 인터넷을 쓰지 않습니다.</li>
+    <li>앱은 사진과 읽은 글자를 저장하지 않습니다. 칸에 채워진 값은 사용자가 저장 버튼을 눌러야 기록이 되고, 저장된 값은 2항의 충전 기록과 같이 기기 안에만 있습니다.</li>
+    <li>이 기능으로 개발자가 받는 정보는 없습니다. 1항의 「수집하는 정보: 없습니다」와 어긋나지 않습니다.</li>
+  </ul>
+
+  <h2>4. 백업 사본</h2>
   <ul>
     <li>앱은 기록의 사본(CSV 파일)을 기기 안의 앱 문서 폴더에 만듭니다. 파일 앱의 「나의 iPhone › 차부기」 폴더에서 볼 수 있습니다. 사본에는 위 2항의 차량, 기록, 충전기, 결제 수단과 앱 설정이 들어 있습니다.</li>
     <li>매일 사본: 앱을 여는 날 처음 만들고, 앱이 백그라운드로 갈 때 그날 사본을 새 자료로 갱신합니다. 최근 30개만 남깁니다.</li>
@@ -77,17 +87,17 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <li>사용자가 iPhone 의 기기 백업(iCloud 백업 또는 컴퓨터 백업)을 켜 두었다면 앱의 자료가 그 백업에 포함될 수 있습니다. 이 백업은 사용자의 Apple 계정과 Apple 의 정책에 따라 관리되며, 개발자는 접근할 수 없습니다.</li>
   </ul>
 
-  <h2>4. 저장 파일 보관 사본</h2>
+  <h2>5. 저장 파일 보관 사본</h2>
   <ul>
     <li>앱의 판이 바뀐 첫 실행에서, 앱은 기록이 든 저장 파일을 앱 전용 폴더에 복사해 둡니다. 최근 3벌만 남깁니다. 이 폴더는 파일 앱에서 보이지 않습니다.</li>
     <li>앱이 저장 파일을 열지 못하면 기록을 지우지 않고 그 파일을 따로 옮겨 둡니다. 사용자가 꺼낼 수 있도록 파일 앱의 「나의 iPhone › 차부기」 폴더 안 「보관_저장파일」 폴더에도 한 벌 복사합니다. 이 폴더는 사용자가 파일 앱에서 직접 볼 수 있고 지울 수 있습니다.</li>
     <li>이 파일들은 기기 안에만 있고 개발자에게 전송되지 않습니다. 앱을 삭제하면 함께 지워집니다.</li>
   </ul>
 
-  <h2>5. 제3자 제공과 처리 위탁</h2>
+  <h2>6. 제3자 제공과 처리 위탁</h2>
   <p>없습니다. 수집하는 정보가 없으므로 다른 사람이나 회사에 제공하거나 맡기는 정보도 없습니다.</p>
 
-  <h2>6. 자료의 삭제</h2>
+  <h2>7. 자료의 삭제</h2>
   <ul>
     <li>충전 기록, 충전기, 결제 수단은 앱 안에서 지울 수 있습니다. 기록을 지울 때는 확인 창을 거치며, 지운 기록은 되살릴 수 없습니다.</li>
     <li>차량은 앱 안에서 지울 수 없고 「매각한 차량」으로 표시만 할 수 있습니다. 차량 정보는 앱을 삭제해야 지워집니다.</li>
@@ -96,16 +106,16 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <li>다른 곳으로 내보낸 파일은 그 파일을 둔 곳에서 사용자가 직접 지웁니다.</li>
   </ul>
 
-  <h2>7. 어린이의 개인정보</h2>
+  <h2>8. 어린이의 개인정보</h2>
   <p>차부기는 나이와 관계없이 누구에게서도 개인정보를 수집하지 않습니다.</p>
 
-  <h2>8. Apple 이 제공하는 통계</h2>
+  <h2>9. Apple 이 제공하는 통계</h2>
   <p>사용자가 기기 설정에서 앱 개발자와 진단 정보를 공유하도록 허용한 경우, Apple 은 개인을 알아볼 수 없는 통계와 오류 보고를 개발자에게 제공할 수 있습니다. 이 정보는 Apple 이 Apple 의 개인정보 처리방침에 따라 다루며, 앱이 따로 수집하는 것이 아닙니다.</p>
 
-  <h2>9. 처리방침의 변경</h2>
+  <h2>10. 처리방침의 변경</h2>
   <p>앱의 기능이 바뀌어 이 내용이 달라지면 이 페이지를 고치고 시행일을 새로 적습니다.</p>
 
-  <h2>10. 문의</h2>
+  <h2>11. 문의</h2>
   <p class="contact">이 처리방침에 대해 궁금한 점은 <a href="mailto:piko9388@icloud.com">piko9388@icloud.com</a> 로 보내 주십시오.</p>
 </section>
 
@@ -132,7 +142,17 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <li>App settings: the place, charger and payment method you used last time, and the vehicle you are recording for</li>
   </ul>
 
-  <h2>3. Backup copies</h2>
+  <h2>3. Payment screenshots</h2>
+  <p>The 「사진」 (Photo) row on the charging entry screen fills in entry fields from values read off a payment screenshot. It works only when you tap the row and choose one photo.</p>
+  <ul>
+    <li>You choose the photo in the iOS system photo picker. The picker runs outside the app, so the app does not ask for access to your photo library; only the one photo you choose is handed to the app. There is no camera capture.</li>
+    <li>The text in the photo is read on your device (on-device text recognition and the app’s own rules). On a device that can use Apple Intelligence (iOS 26 or later, with the on-device AI model available), the on-device AI model also reads that text for fields the rules left empty. That model also runs on the device.</li>
+    <li>The photo and the text read from it never leave your device. They are not sent to the developer or to any other company’s server, and the app does not use the internet for this feature.</li>
+    <li>The app does not store the photo or the text read from it. Values filled into the fields become a record only when you tap the save button, and a saved record stays on your device like the charging records in section 2.</li>
+    <li>The developer receives no data through this feature, which is consistent with “None” in section 1.</li>
+  </ul>
+
+  <h2>4. Backup copies</h2>
   <ul>
     <li>The app saves copies of your records (CSV files) in its documents folder on your device. You can see them in the Files app under “On My iPhone › 차부기”. A copy contains the vehicles, records, chargers, payment methods and app settings listed in section 2.</li>
     <li>Daily copy: created the first time you open the app each day, and refreshed with your latest data when the app goes to the background. Only the 30 most recent are kept.</li>
@@ -142,17 +162,17 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <li>If you have turned on device backup for your iPhone (iCloud Backup or a backup to a computer), the app’s data may be included in that backup. That backup is managed under your Apple Account and Apple’s policies, and the developer has no access to it.</li>
   </ul>
 
-  <h2>4. Saved copies of the data file</h2>
+  <h2>5. Saved copies of the data file</h2>
   <ul>
     <li>On the first launch after the app’s version changes, the app copies the data file that holds your records into a folder private to the app, and keeps the 3 most recent. That folder is not visible in the Files app.</li>
     <li>If the app cannot open its data file, it does not delete your records. It moves that file aside, and also copies it into the folder 「보관_저장파일」 inside “On My iPhone › 차부기” so you can take it out. You can see and delete that folder yourself in the Files app.</li>
     <li>These files stay on your device and are not sent to the developer. Deleting the app removes them.</li>
   </ul>
 
-  <h2>5. Sharing with third parties</h2>
+  <h2>6. Sharing with third parties</h2>
   <p>None. Because no data is collected, there is nothing to share with or hand over to anyone else.</p>
 
-  <h2>6. Deleting your data</h2>
+  <h2>7. Deleting your data</h2>
   <ul>
     <li>You can delete charging records, chargers and payment methods inside the app. Deleting a record asks for confirmation, and a deleted record cannot be restored.</li>
     <li>A vehicle cannot be deleted inside the app; you can only mark it as sold (「매각한 차량」). Vehicle details are removed when you delete the app.</li>
@@ -161,16 +181,16 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <li>Files you exported elsewhere remain where you put them until you delete them yourself.</li>
   </ul>
 
-  <h2>7. Children’s privacy</h2>
+  <h2>8. Children’s privacy</h2>
   <p>CarTally does not collect personal data from anyone, regardless of age.</p>
 
-  <h2>8. Statistics provided by Apple</h2>
+  <h2>9. Statistics provided by Apple</h2>
   <p>If you have chosen in your device settings to share diagnostics with app developers, Apple may provide the developer with statistics and crash reports that do not identify you. Apple handles that information under its own privacy policy; the app itself does not collect it.</p>
 
-  <h2>9. Changes to this policy</h2>
+  <h2>10. Changes to this policy</h2>
   <p>If the app’s features change in a way that affects this policy, this page will be updated with a new effective date.</p>
 
-  <h2>10. Contact</h2>
+  <h2>11. Contact</h2>
   <p class="contact">Questions about this policy: <a href="mailto:piko9388@icloud.com">piko9388@icloud.com</a></p>
 </section>
 

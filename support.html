@@ -64,6 +64,25 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
   </details>
 
   <details>
+    <summary>결제 화면 사진으로 입력할 수 있나요?</summary>
+    <div>
+      <p>새 충전 기록을 입력하는 화면에서 할 수 있습니다. 기록을 고치는 창에는 이 줄이 없습니다.</p>
+      <p><strong>사용법:</strong></p>
+      <ol>
+        <li>홈의 「충전」을 눌러 입력 화면을 엽니다.</li>
+        <li>단가, 충전량, 총액 칸 맨 위의 「사진」 줄을 누르고, 사진 보관함에서 충전 앱이나 결제 알림의 캡처를 한 장 고릅니다. 카메라로 찍는 기능은 없습니다.</li>
+        <li>줄 오른쪽에 「인식 중」이 보이다가 「3칸 입력」처럼 몇 칸을 채웠는지 알려 줍니다.</li>
+        <li>채워진 값을 확인하고, 틀린 칸은 평소처럼 고친 뒤 「8,400원 저장」처럼 금액이 적힌 버튼을 누릅니다. 앱은 자동으로 저장하지 않습니다.</li>
+      </ol>
+      <p><strong>「사진」과 「확인」 표시:</strong> 채워진 칸 이름 옆에 작은 표시가 붙습니다. 「사진」은 사진에서 읽고 앱이 확인한 값입니다(금액 칸은 총액, 충전량, 단가의 계산이 맞아 떨어진 경우). 「확인」은 사진에서 읽었지만 맞는지 확인이 필요한 값이니 화면과 비교해 보십시오. 그 칸을 고치면 표시는 사라집니다. 저장한 기록에는 표시가 남지 않습니다.</p>
+      <p><strong>총액:</strong> 할인을 뺀 뒤 실제로 낸 돈을 읽습니다. 사용자가 먼저 넣은 값이 사진의 값과 다르면 그 칸은 덮지 않고 그대로 두며, 「2칸 입력 · 1칸 유지」처럼 알려 줍니다.</p>
+      <p><strong>읽지 못하는 경우:</strong> 모든 화면을 읽지는 못합니다. 여러 건이 함께 보이는 화면, 글자가 작거나 흐린 화면은 해당 칸을 비워 둡니다. 읽은 값이 하나도 없으면 칸은 그대로이고 「인식 실패」가 보이며, 사진을 열지 못하면 「사진 오류」가 보입니다. 이때는 직접 입력하면 됩니다.</p>
+      <p><strong>기기에 따라:</strong> 사진 속 글자는 모든 기기에서 기기 안 글자 인식과 앱의 규칙으로 읽습니다. Apple Intelligence 를 쓸 수 있는 기기(iOS 26 이상)에서는 규칙이 비운 칸에 한해 기기 안 AI 모델이 추가로 읽습니다. 그 밖의 기기에서는 규칙만 동작합니다.</p>
+      <p><strong>개인정보:</strong> 사진은 시스템 사진 선택 창으로 한 장만 앱에 전달되므로 사진 보관함 접근 권한을 묻지 않습니다. 사진과 읽은 글자는 기기 밖으로 나가지 않고, 앱은 사진을 저장하지 않으며, 이 기능은 인터넷을 쓰지 않습니다. 자세한 내용은 <a href="privacy.html#ko">개인정보 처리방침</a>의 「결제 화면 사진」에 있습니다.</p>
+    </div>
+  </details>
+
+  <details>
     <summary>백업은 어떻게 되나요?</summary>
     <div>
       <p>따로 할 일은 없습니다. 앱이 기기 안에 사본(CSV 파일)을 만들어 둡니다. 사본은 두 종류이고, 개수 한도를 따로 셉니다.</p>
@@ -163,6 +182,25 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
       </ol>
       <p>Both ways show a confirmation; tap 「삭제」 (Delete) there to delete. A deleted record cannot be restored.</p>
       <p>When you edit or delete a record, this month’s spending, cost per km and efficiency on Home are recalculated.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>Can I fill in a charge from a payment screenshot?</summary>
+    <div>
+      <p>Yes, on the screen where you enter a new charging record. The sheet for editing a record does not have this row.</p>
+      <p><strong>How to use it:</strong></p>
+      <ol>
+        <li>On Home, tap 「충전」 (Charge) to open the entry screen.</li>
+        <li>Tap the 「사진」 (Photo) row at the top of the unit price, energy and amount fields, and choose one screenshot of a charging app or a payment notification from your photo library. There is no camera capture.</li>
+        <li>「인식 중」 (Reading) appears at the right of the row, then a note such as 「3칸 입력」 (3 fields filled) tells you how many fields were filled.</li>
+        <li>Check the values, correct any field as usual, and tap the button that shows the amount, such as 「8,400원 저장」 (Save 8,400 won). The app never saves on its own.</li>
+      </ol>
+      <p><strong>The 「사진」 (Photo) and 「확인」 (Check) marks:</strong> a small mark appears next to the name of each filled field. 「사진」 means the value was read from the photo and the amount, energy and unit price agree with each other. 「확인」 means the value was read from the photo but needs your check, so compare it with the screenshot. Editing a field removes its mark. Saved records do not keep the marks.</p>
+      <p><strong>Amount:</strong> the app reads the amount you actually paid, after discounts. If a value you entered first differs from the one in the photo, that field is left as it is and the note says so, for example 「2칸 입력 · 1칸 유지」 (2 fields filled, 1 kept).</p>
+      <p><strong>When it cannot read:</strong> not every screen can be read. For a screen that shows several charges at once, or text that is small or blurry, the affected fields stay empty. If nothing is read, the fields stay as they were and 「인식 실패」 (Not recognized) appears; if the photo cannot be opened, 「사진 오류」 (Photo error) appears. In that case, enter the values yourself.</p>
+      <p><strong>Depends on the device:</strong> on every device the text in the photo is read by on-device text recognition and the app’s own rules. On a device that can use Apple Intelligence (iOS 26 or later), the on-device AI model also reads fields the rules left empty. On other devices, only the rules run.</p>
+      <p><strong>Privacy:</strong> only the one photo you choose is handed to the app through the system photo picker, so the app does not ask for access to your photo library. The photo and the text read from it never leave your device, the app does not store the photo, and this feature does not use the internet. See “Payment screenshots” in the <a href="privacy.html#en">Privacy Policy</a>.</p>
     </div>
   </details>
 
