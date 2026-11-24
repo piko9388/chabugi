@@ -10,7 +10,7 @@
 @media (prefers-color-scheme:dark){:root{--bg:#0E0F11;--card:#1C1D20;--text:#F5F5F7;--sub:#A3A3AA;--line:#2E2F33;--accent:#2DD4B4;--soft:#0F2E29;--softtext:#5EEAD0}}
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.7}
+body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","PingFang TC","Microsoft JhengHei","Malgun Gothic","Segoe UI",Roboto,sans-serif;font-size:17px;line-height:1.7}
 main{max-width:720px;margin:0 auto;padding:24px 16px 48px}
 header.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:16px}
 .brand{font-weight:800;font-size:20px;color:var(--accent)}
@@ -18,6 +18,7 @@ nav.lang a{display:inline-block;padding:8px 14px;border-radius:999px;background:
 section.doc{background:var(--card);border-radius:20px;padding:24px 20px;margin-bottom:16px}
 :lang(ko){word-break:keep-all;overflow-wrap:break-word}
 :lang(en){overflow-wrap:break-word}
+:lang(zh-Hant){overflow-wrap:break-word;line-height:1.8}
 h1{font-size:26px;line-height:1.3;margin:0 0 8px;font-weight:800}
 h2{font-size:19px;line-height:1.4;margin:28px 0 8px;font-weight:700}
 p{margin:0 0 12px}
@@ -41,7 +42,7 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 <main>
 <header class="top">
   <span class="brand">차부기 · CarTally</span>
-  <nav class="lang" aria-label="언어 Language"><a href="#ko">한국어</a><a href="#en" lang="en">English</a></nav>
+  <nav class="lang" aria-label="언어 Language"><a href="#ko">한국어</a><a href="#en" lang="en">English</a><a href="#zh-Hant" lang="zh-Hant">繁體中文</a></nav>
 </header>
 
 <section class="doc" id="ko" lang="ko">
@@ -120,7 +121,7 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
       <ol>
         <li>쓰던 기기에서 설정 › 백업 › 「공유」를 누르고, 파일을 iCloud Drive 에 저장하거나 AirDrop 으로 새 기기에 보냅니다.</li>
         <li>새 기기에 차부기를 설치합니다.</li>
-        <li>새 기기에서 앱을 처음 열면 나오는 차량 등록 화면 맨 위의 「백업 복원」으로 그 파일을 고릅니다. 이미 차량을 등록했다면 설정 › 백업 › 「복원」을 씁니다.</li>
+        <li>새 기기에서 앱을 처음 열면 「표기」 화면이 나옵니다. 「시작」을 누르면 나오는 「차량 등록」 화면 맨 위의 「백업 복원」으로 그 파일을 고릅니다. 이미 차량을 등록했다면 설정 › 백업 › 「복원」을 씁니다.</li>
       </ol>
       <p>차부기에는 계정이 없어서 기기 사이에 자동으로 맞춰지지 않습니다. 앱을 지우면 「나의 iPhone › 차부기」 폴더의 사본도 함께 지워지므로, 앱을 지우거나 기기를 초기화하기 전에 먼저 「공유」로 내보내 주십시오.</p>
     </div>
@@ -168,37 +169,59 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
 
 <section class="doc" id="en" lang="en">
   <h1>CarTally Support</h1>
-  <p class="meta">Frequently asked questions and contact. Version 1.0 is Korean-language, so button names are written as they appear in the app (Korean, in 「 」) with an English gloss.</p>
+  <p class="meta">Frequently asked questions and contact for version 1.1. Button and screen names are written in quotation marks exactly as they appear in the app in English. Amounts in the examples are in pounds.</p>
 
   <details open>
     <summary>How do I edit or delete a record?</summary>
     <div>
-      <p>Open the 「기록」 (Records) tab. Records are grouped by month, and each month header shows that month’s total.</p>
-      <p><strong>Edit:</strong> tap a record to open the 「충전 기록 수정」 (Edit charging record) sheet, change the details or date, and tap the button at the bottom that shows the amount, such as 「8,400원 저장」 (Save 8,400 won). Tapping a row under 「최근 기록」 (Recent records) on Home opens the same sheet.</p>
+      <p>Open the “Records” tab at the bottom. Records are grouped by month, and each month header shows that month’s total.</p>
+      <p><strong>Edit:</strong> tap a record to open “Edit Charge Record”. Change the details or the date, then tap the button at the bottom that shows the amount, such as “Save £22.60”. Tapping a row under “Recent Records” on Home opens the same screen.</p>
       <p><strong>Delete:</strong> there are two ways.</p>
       <ol>
-        <li>In the 「기록」 (Records) tab, swipe the record to the left and tap 「삭제」 (Delete).</li>
-        <li>Open the 「충전 기록 수정」 sheet and tap 「기록 삭제」 (Delete record) at the very bottom.</li>
+        <li>In the “Records” tab, swipe the record to the left and tap “Delete”.</li>
+        <li>Open “Edit Charge Record” and tap “Delete Record” at the very bottom.</li>
       </ol>
-      <p>Both ways show a confirmation; tap 「삭제」 (Delete) there to delete. A deleted record cannot be restored.</p>
-      <p>When you edit or delete a record, this month’s spending, cost per km and efficiency on Home are recalculated.</p>
+      <p>Both ways ask once more; tap “Delete” in the confirmation to delete. A deleted record cannot be restored.</p>
+      <p>When you edit or delete a record, this month’s spending, cost per distance and efficiency on Home are recalculated.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>How do I choose my currency, kilometres or miles?</summary>
+    <div>
+      <p>When you first open the app, the “Language &amp; Units” screen shows “Language”, “Currency”, “Distance Unit” (km or mi) and “Efficiency Unit” (km/kWh, mi/kWh or kWh/100km). The first choices come from your device’s region. Tap “Start”, and the “Add Vehicle” screen opens.</p>
+      <p>You can change them later in “Settings” › “Language &amp; Units”. The “Language” row opens the iOS Settings page for the app, where you can pick the app’s language.</p>
+      <ul>
+        <li>A new “Currency” or “Distance Unit” applies to vehicles you add afterwards and to vehicles that have no records yet. A vehicle that already has records keeps its currency and distance unit.</li>
+        <li>When you change “Distance Unit”, “Efficiency Unit” follows it (km/kWh ↔ mi/kWh). If you chose kWh/100km, it stays as it is.</li>
+        <li>“Efficiency Unit” only changes how efficiency is shown. Your records are not changed.</li>
+      </ul>
+      <p>Amounts in different currencies are never added together. If a vehicle has records in another currency, Home leaves them out of this month’s total and shows a line such as “Other-currency records excluded: 2”, and cost per distance shows “Includes records in other currencies” instead of a value. Efficiency does not depend on currency.</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>How do I enter a charge breakdown (energy, time, tax)?</summary>
+    <div>
+      <p>For a vehicle recorded in a currency other than Korean won, the charging entry screen has a “Charge Breakdown” section. Enter the amounts for “Energy”, “Time”, “Session fee”, “Idle fee” and “Tax”. “Tax Included” is on at first, meaning the tax is already part of the other amounts; turn it off if the tax is charged on top, and the sum adds it.</p>
+      <p>If the sum differs from the total, the app shows “Differs from total · Breakdown sum £…” and an “Apply £…” button that uses the sum as the total.</p>
     </div>
   </details>
 
   <details>
     <summary>Can I fill in a charge from a payment screenshot?</summary>
     <div>
-      <p>Yes, on the screen where you enter a new charging record. The sheet for editing a record does not have this row.</p>
+      <p>Only for a vehicle recorded in Korean won (KRW), on the screen where you add a new charge. It is built for Korean charging apps and payment notifications. The screen for editing a record does not have this row.</p>
       <p><strong>How to use it:</strong></p>
       <ol>
-        <li>On Home, tap 「충전」 (Charge) to open the entry screen.</li>
-        <li>Tap the 「사진」 (Photo) row at the top of the unit price, energy and amount fields, and choose one screenshot of a charging app or a payment notification from your photo library. There is no camera capture.</li>
-        <li>「인식 중」 (Reading) appears at the right of the row, then a note such as 「3칸 입력」 (3 fields filled) tells you how many fields were filled.</li>
-        <li>Check the values, correct any field as usual, and tap the button that shows the amount, such as 「8,400원 저장」 (Save 8,400 won). The app never saves on its own.</li>
+        <li>On Home, tap “Charge” to open the entry screen.</li>
+        <li>Tap the “Photo” row at the top of the unit price, energy and total fields, and choose one screenshot of a charging app or a payment notification from your photo library. There is no camera capture.</li>
+        <li>“Reading…” appears at the right of the row, then a note such as “3 filled” tells you how many fields were filled.</li>
+        <li>Check the values, correct any field as usual, and tap the button that shows the amount. The app never saves on its own.</li>
       </ol>
-      <p><strong>The 「사진」 (Photo) and 「확인」 (Check) marks:</strong> a small mark appears next to the name of each filled field. 「사진」 means the value was read from the photo and the amount, energy and unit price agree with each other. 「확인」 means the value was read from the photo but needs your check, so compare it with the screenshot. Editing a field removes its mark. Saved records do not keep the marks.</p>
-      <p><strong>Amount:</strong> the app reads the amount you actually paid, after discounts. If a value you entered first differs from the one in the photo, that field is left as it is and the note says so, for example 「2칸 입력 · 1칸 유지」 (2 fields filled, 1 kept).</p>
-      <p><strong>When it cannot read:</strong> not every screen can be read. For a screen that shows several charges at once, or text that is small or blurry, the affected fields stay empty. If nothing is read, the fields stay as they were and 「인식 실패」 (Not recognized) appears; if the photo cannot be opened, 「사진 오류」 (Photo error) appears. In that case, enter the values yourself.</p>
+      <p><strong>The “Photo” and “Check” marks:</strong> a small mark appears next to the name of each filled field. “Photo” means the value was read from the photo and the app could confirm it (for the amount fields, the total, energy and unit price agree with each other). “Check” means the value was read from the photo but needs your check, so compare it with the screenshot. Editing a field removes its mark. Saved records do not keep the marks.</p>
+      <p><strong>Total:</strong> the app reads the amount you actually paid, after discounts. If a value you entered first differs from the one in the photo, that field is left as it is and the note says so, for example “2 filled · 1 kept”.</p>
+      <p><strong>When it cannot read:</strong> not every screen can be read. For a screen that shows several charges at once, or text that is small or blurry, the affected fields stay empty. If nothing is read, the fields stay as they were and “Recognition failed” appears; if the photo cannot be opened, “Photo error” appears. In that case, enter the values yourself.</p>
       <p><strong>Depends on the device:</strong> on every device the text in the photo is read by on-device text recognition and the app’s own rules. On a device that can use Apple Intelligence (iOS 26 or later), the on-device AI model also reads fields the rules left empty. On other devices, only the rules run.</p>
       <p><strong>Privacy:</strong> only the one photo you choose is handed to the app through the system photo picker, so the app does not ask for access to your photo library. The photo and the text read from it never leave your device, the app does not store the photo, and this feature does not use the internet. See “Payment screenshots” in the <a href="privacy.html#en">Privacy Policy</a>.</p>
     </div>
@@ -210,17 +233,18 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
       <p>You don’t have to do anything. The app keeps copies (CSV files) on your device. There are two kinds, each with its own limit.</p>
       <ul>
         <li><strong>Daily copy:</strong> created the first time you open the app each day, and refreshed with your latest data when the app goes to the background. The 30 most recent are kept.</li>
-        <li><strong>Other copies:</strong> made when you tap 「백업」 (Back up) or 「공유」 (Share), just before a 「복원」 (Restore), and when the record count has dropped (the file name contains 「기록감소」). The 10 most recent are kept.</li>
+        <li><strong>Other copies:</strong> made when you tap “Backup” or “Share”, just before a “Restore”, and when the record count has dropped (the file name contains “fewer-records”). The 10 most recent are kept.</li>
         <li>When a limit is exceeded, the oldest copies are deleted first.</li>
-        <li>Where the copies are: Files app › On My iPhone › 차부기</li>
+        <li>Where the copies are: Files app › On My iPhone › CarTally. Their names start with “CarTally_backup_”; copies made while the app was in Korean start with “차계부_백업_”, and the app counts both.</li>
       </ul>
-      <p>The 「백업」 (Backup) section of the 「설정」 (Settings) tab has three buttons:</p>
+      <p>The “Backup” section of the “Settings” tab has three buttons:</p>
       <ul>
-        <li>「백업」 (Back up): saves a copy from your current data.</li>
-        <li>「공유」 (Share): makes a new copy from your data at the moment you tap it and opens the share sheet. Save it to iCloud Drive or send it by AirDrop to keep it somewhere else.</li>
-        <li>「복원」 (Restore): choose a backup file to replace your current data with its contents (see the next question).</li>
+        <li>“Backup”: saves a copy of your current data.</li>
+        <li>“Share”: makes a new copy from your data at the moment you tap it and opens the share sheet. Save it to iCloud Drive or send it by AirDrop to keep it somewhere else.</li>
+        <li>“Restore”: choose a backup file to replace your current data with its contents (see the next question).</li>
       </ul>
-      <p>Deleting the app also removes the copies in the “On My iPhone › 차부기” folder. To keep a copy long-term, save one elsewhere with 「공유」 (Share).</p>
+      <p>Deleting the app also removes the copies in the “On My iPhone › CarTally” folder. To keep a copy long-term, save one elsewhere with “Share”.</p>
+      <p>Backup copies made by version 1.1 use a new format (version 2) that earlier versions of the app cannot read; restore them in 1.1 or later.</p>
     </div>
   </details>
 
@@ -228,11 +252,11 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <summary>How do I restore from a backup file?</summary>
     <div>
       <ol>
-        <li>Go to 「설정」 (Settings) › 「백업」 (Backup) › 「복원」 (Restore) and choose a backup file.</li>
+        <li>Go to “Settings” › “Backup” › “Restore” and choose a backup file.</li>
         <li>A confirmation shows the number of vehicles, records, chargers and payment methods in the file, and the total amount.</li>
-        <li>Tap 「복원」 (Restore) in the confirmation to replace your current data with the contents of the file. Tap 「취소」 (Cancel) to stop.</li>
+        <li>Tap “Restore” in the confirmation to replace your current data with the contents of the file. Tap “Cancel” to stop.</li>
       </ol>
-      <p>Restoring replaces your current data; it does not merge. Before replacing, the app automatically saves a safety copy of your current data, and its file name gets 「가져오기전」 added. If you restored the wrong file, restore that copy. A file that can’t be read is not imported, and your current data is left untouched. If an error occurs during the restore, the app rolls back to the safety copy.</p>
+      <p>Restoring replaces your current data; it does not merge. Before replacing, the app automatically saves a safety copy of your current data, and its file name contains “before-restore” (“가져오기전” if the app was in Korean). If you restored the wrong file, restore that copy. A file that can’t be read is not imported, and your current data is left untouched. If an error occurs during the restore, the app rolls back to the safety copy. The currency and units saved in the file are restored with it.</p>
     </div>
   </details>
 
@@ -240,25 +264,25 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <summary>How do I move my records to a new device?</summary>
     <div>
       <ol>
-        <li>On your old device, go to 「설정」 (Settings) › 「백업」 (Backup) › 「공유」 (Share) and save the file to iCloud Drive or send it to the new device with AirDrop.</li>
-        <li>Install the app on the new device.</li>
-        <li>On first launch, the vehicle registration screen has 「백업 복원」 (Restore backup) at the very top; choose that file there. If you have already registered a vehicle, use 「설정」 › 「백업」 › 「복원」 (Restore) instead.</li>
+        <li>On your old device, go to “Settings” › “Backup” › “Share” and save the file to iCloud Drive or send it to the new device with AirDrop.</li>
+        <li>Install CarTally on the new device.</li>
+        <li>On first launch, tap “Start” on the “Language &amp; Units” screen. The “Add Vehicle” screen then has “Restore Backup” at the very top; choose the file there. If you have already added a vehicle, use “Settings” › “Backup” › “Restore” instead.</li>
       </ol>
-      <p>The app has no account, so devices don’t sync automatically. Deleting the app also removes the copies in the “On My iPhone › 차부기” folder, so export with 「공유」 (Share) before you delete the app or erase the device.</p>
+      <p>The app has no account, so devices don’t sync automatically. Deleting the app also removes the copies in the “On My iPhone › CarTally” folder, so export with “Share” before you delete the app or erase the device.</p>
     </div>
   </details>
 
   <details>
     <summary>Where are my records stored?</summary>
     <div>
-      <p>Only on the device you use. The app has no account, no server, no ads, and no analytics, it doesn’t use your location, and it doesn’t send or receive your data over the internet. Only the two links at the bottom of Settings, 「개인정보 처리방침」 (Privacy Policy) and 「지원」 (Support), open those pages in your device’s browser. The developer cannot see your records. See the <a href="privacy.html#en">Privacy Policy</a> for details.</p>
+      <p>Only on the device you use. The app has no account, no server, no ads and no analytics, it doesn’t use your location, and it doesn’t send or receive your data over the internet. Only the two links at the bottom of Settings, “Privacy Policy” and “Support”, open those pages in your device’s browser. The developer cannot see your records. See the <a href="privacy.html#en">Privacy Policy</a> for details.</p>
     </div>
   </details>
 
   <details>
     <summary>What if my charging rate changes?</summary>
     <div>
-      <p>In 「설정」 (Settings) › 「충전기 설정」 (Charger settings), tap that charger’s row, change the unit price and tap 「저장」 (Save). The new price applies from the day you change it, and past records keep the amount calculated at the old price. If you paid a different rate just once, change the unit price in the entry form and it applies to that record only.</p>
+      <p>In “Settings” › “Charger Settings”, tap that charger’s row, change the unit price and tap “Save”. The new price applies from the day you change it, and past records keep the amount calculated at the old price. If you paid a different rate just once, change the unit price on the entry screen and it applies to that record only.</p>
     </div>
   </details>
 
@@ -266,26 +290,173 @@ details p:last-child,details ol:last-child,details ul:last-child{margin-bottom:0
     <summary>Can I delete a charger, a payment method, or a vehicle?</summary>
     <div>
       <ul>
-        <li>Chargers can be deleted in 「설정」 › 「충전기 설정」 (Charger settings), and payment methods in 「설정」 › 「결제 수단」 (Payment methods). Past records that used a deleted charger or payment method keep the name they had at the time.</li>
-        <li>A vehicle cannot be deleted. For a vehicle you no longer use, open it in Settings and turn on 「매각한 차량」 (Sold vehicle); it is kept together with its records. To remove vehicle details completely, delete the app.</li>
+        <li>Chargers can be deleted in “Settings” › “Charger Settings”, and payment methods in “Settings” › “Payment Method”. Past records that used a deleted charger or payment method keep the name they had at the time.</li>
+        <li>A vehicle cannot be deleted. For a vehicle you no longer use, open it in Settings and turn on “Vehicle Sold”; it is kept together with its records. To remove vehicle details completely, delete the app.</li>
       </ul>
     </div>
   </details>
 
   <details>
-    <summary>A 「저장소 오류」 (Storage error) screen appeared. What should I do?</summary>
+    <summary>A “Storage Error” screen appeared. What should I do?</summary>
     <div>
-      <p>This screen appears when the app could not open the data file that holds your records. The app does not delete your records here. It moves the data file aside and shows its name on the 「옮긴 저장 파일」 (Moved data file) line. If the copy succeeded, the 「꺼낼 수 있는 사본」 (Copy you can take out) line shows Files app › On My iPhone › 차부기 › 보관_저장파일.</p>
+      <p>This screen appears when the app could not open the data file that holds your records. The app does not delete your records here. It moves the data file aside and shows its name on the “Moved data file” line. If the copy succeeded, the “Copies You Can Retrieve” line shows Files app › On My iPhone › CarTally › 보관_저장파일.</p>
       <ol>
         <li>Your records are kept, not deleted. Please do not delete the app; deleting it also deletes the kept files.</li>
-        <li>Do not delete the 「보관_저장파일」 folder, and write to the address at the bottom of this page. The 「지원」 (Support) line on that screen also leads to this page.</li>
-        <li>If you have a backup copy, choose it with 「복원」 (Restore) in the 「백업」 (Backup) section lower on the same screen. While this screen is showing, the app does not overwrite an existing copy from today with empty data.</li>
-        <li>Tap 「닫기」 (Close) to go to the normal screen.</li>
+        <li>Do not delete the 「보관_저장파일」 folder, and write to the address at the bottom of this page. The “Support” line on that screen also leads to this page.</li>
+        <li>If you have a backup copy, choose it with “Restore” in the “Backup” section lower on the same screen. While this screen is showing, the app does not overwrite an existing copy from today with empty data.</li>
+        <li>Tap “Close” to go to the normal screen.</li>
       </ol>
+      <p>If the “Storage Error” screen says “Pre-update copy failed · Check storage, then relaunch · Records kept as is”, the app could not save its safety copy before updating the data file to the 1.1 format, so it did not open the file. Your records are kept as they were. Free up storage on your iPhone and open the app again.</p>
     </div>
   </details>
 
   <p class="contact">For anything not covered here, or to send feedback, write to <a href="mailto:piko9388@icloud.com">piko9388@icloud.com</a>. The app has no way to send your records, so please describe the screen and the steps that led to the problem.</p>
+</section>
+
+<section class="doc" id="zh-Hant" lang="zh-Hant">
+  <h1>CarTally 支援</h1>
+  <p class="meta">1.1 版的常見問題與聯絡方式。按鈕與畫面名稱依 App 繁體中文畫面上的文字，以「」標示。範例金額為新臺幣。</p>
+
+  <details open>
+    <summary>如何編輯或刪除紀錄？</summary>
+    <div>
+      <p>開啟下方的「紀錄」分頁。紀錄會依月份分組，每個月份標題會顯示該月的合計。</p>
+      <p><strong>編輯：</strong>點選要修改的紀錄，會開啟「編輯充電紀錄」。修改內容或日期後，點選下方顯示金額的按鈕（例如「儲存 $420」）。在「首頁」的「最近紀錄」中點選該列，也會開啟同一個畫面。</p>
+      <p><strong>刪除：</strong>有兩種方式。</p>
+      <ol>
+        <li>在「紀錄」分頁中，將紀錄向左滑動，點選「刪除」。</li>
+        <li>開啟「編輯充電紀錄」，點選最下方的「刪除紀錄」。</li>
+      </ol>
+      <p>兩種方式都會再顯示一次確認視窗，在確認視窗中點選「刪除」即可刪除。刪除的紀錄無法復原。</p>
+      <p>編輯或刪除紀錄後，「首頁」的本月花費、每公里費用與電耗都會重新計算。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>如何選擇貨幣、公里或英里？</summary>
+    <div>
+      <p>第一次開啟 App 時，「語言與單位」畫面會顯示「語言」「幣別」「距離單位」（km 或 mi）與「電耗單位」（km/kWh、mi/kWh 或 kWh/100km）。一開始的選項依裝置的地區而定。點選「開始」後，會開啟「新增車輛」畫面。</p>
+      <p>之後可在「設定」›「語言與單位」變更。點選「語言」會開啟 iOS 設定中本 App 的頁面，可在那裡選擇 App 的語言。</p>
+      <ul>
+        <li>變更「幣別」或「距離單位」後，之後新增的車輛與尚無紀錄的車輛會套用新的設定。已有紀錄的車輛維持原本的貨幣與距離單位。</li>
+        <li>變更「距離單位」時，「電耗單位」會跟著切換（km/kWh ↔ mi/kWh）。若選的是 kWh/100km，則維持不變。</li>
+        <li>「電耗單位」只改變電耗的顯示方式，不會變更您的紀錄。</li>
+      </ul>
+      <p>不同貨幣的金額不會合計。若某輛車含有其他貨幣的紀錄，「首頁」的本月合計不會計入這些紀錄，並顯示「未計入其他幣別紀錄 2 筆」這類說明；每公里費用會顯示「含其他幣別紀錄」，不計算數值。電耗不受貨幣影響。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>如何輸入費用明細（電費、時間費、稅金）？</summary>
+    <div>
+      <p>以韓元以外的貨幣記錄的車輛，充電輸入畫面會有「費用明細」區塊。可以分別填入「電費」「時間費」「單次費」「超時佔用費」與「稅金」的金額。「含稅」一開始為開啟，表示稅金已包含在其他金額中；若稅金另外加收，請關閉「含稅」，明細合計就會加上稅金。</p>
+      <p>若明細合計與總額不同，App 會顯示「與總額不符 · 明細合計 $…」，並可點選「套用 $…」按鈕改用合計作為總額。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>可以用付款畫面的截圖輸入嗎？</summary>
+    <div>
+      <p>只有以韓元（KRW）記錄的車輛，在新增充電紀錄的畫面上可以使用。此功能是為韓國的充電 App 與付款通知設計的。編輯紀錄的畫面沒有這一列。</p>
+      <p><strong>使用方式：</strong></p>
+      <ol>
+        <li>在「首頁」點選「充電」，開啟輸入畫面。</li>
+        <li>點選單價、充電量與總額欄位上方的「照片」一列，從照片圖庫中選擇一張充電 App 或付款通知的截圖。沒有相機拍攝功能。</li>
+        <li>該列右側會先顯示「辨識中…」，接著以「已填入 3 欄」這類說明告訴您填入了幾個欄位。</li>
+        <li>確認填入的數值，有誤的欄位照常修改後，點選顯示金額的按鈕。App 不會自動儲存。</li>
+      </ol>
+      <p><strong>「照片」與「確認」標記：</strong>已填入的欄位名稱旁會出現小標記。「照片」表示從照片讀取且 App 已確認的數值（總額、充電量與單價三欄的計算互相吻合）。「確認」表示從照片讀取但需要您確認的數值，請與截圖比對。修改該欄位後標記會消失。儲存後的紀錄不會保留標記。</p>
+      <p><strong>總額：</strong>App 會讀取扣除折扣後實際支付的金額。若您先輸入的數值與照片中的不同，該欄位會維持不變，並以「已填入 2 欄 · 保留 1 欄」這類說明告訴您。</p>
+      <p><strong>無法讀取時：</strong>並非所有畫面都能讀取。同時顯示多筆充電的畫面，或文字太小、模糊的畫面，相關欄位會保持空白。如果完全沒有讀到數值，欄位維持原樣並顯示「辨識失敗」；如果無法開啟照片，會顯示「照片錯誤」。此時請自行輸入。</p>
+      <p><strong>依裝置而定：</strong>所有裝置都會以裝置上的文字辨識與 App 本身的規則讀取照片中的文字。在可使用 Apple Intelligence 的裝置上（iOS 26 或以上），對於規則未能填入的欄位，裝置上的 AI 模型也會讀取。其他裝置只使用規則。</p>
+      <p><strong>隱私：</strong>透過系統的照片選擇畫面，App 只會收到您選擇的那一張照片，因此不會要求取用照片圖庫。照片與讀取到的文字不會離開您的裝置，App 不會儲存照片，此功能也不使用網際網路。詳情請見<a href="privacy.html#zh-Hant">隱私權政策</a>的「付款截圖」。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>備份是怎麼運作的？</summary>
+    <div>
+      <p>您不需要做任何事。App 會在裝置上保存備份檔（CSV 檔）。備份檔有兩種，各自有數量上限。</p>
+      <ul>
+        <li><strong>每日備份：</strong>每天第一次開啟 App 時建立，App 進入背景時以最新資料更新。保留最近 30 份。</li>
+        <li><strong>其他備份：</strong>在您點選「備份」或「分享」時、「還原」之前，以及紀錄筆數減少時建立（檔名含有「fewer-records」）。保留最近 10 份。</li>
+        <li>超過上限時，會先刪除最舊的備份檔。</li>
+        <li>備份檔位置：「檔案」App › 我的 iPhone › CarTally。檔名以「CarTally_backup_」開頭；App 為韓文介面時建立的備份檔以「차계부_백업_」開頭，兩種檔名的備份檔，App 都會一併計算。</li>
+      </ul>
+      <p>「設定」分頁的「備份」區塊有三個按鈕：</p>
+      <ul>
+        <li>「備份」：以目前的資料儲存一份備份檔。</li>
+        <li>「分享」：以點選當下的資料建立新的備份檔，並開啟分享選單。您可以存到 iCloud 雲碟，或用 AirDrop 傳送，保存到其他地方。</li>
+        <li>「還原」：選擇備份檔，以檔案內容取代目前的資料（見下一個問題）。</li>
+      </ul>
+      <p>刪除 App 時，「我的 iPhone › CarTally」內的備份檔也會一併刪除。若要長期保存，請用「分享」另存到其他地方。</p>
+      <p>1.1 版建立的備份檔使用新的格式（第 2 版），較舊版本的 App 無法讀取，請使用 1.1 版或更新的版本還原。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>如何從備份檔還原？</summary>
+    <div>
+      <ol>
+        <li>前往「設定」›「備份」›「還原」，選擇備份檔。</li>
+        <li>確認視窗會顯示檔案中的車輛、紀錄、充電樁與付款方式的數量，以及金額合計。</li>
+        <li>在確認視窗中點選「還原」，就會以檔案內容取代目前的資料。若要中止，請點選「取消」。</li>
+      </ol>
+      <p>還原是取代目前的資料，不是合併。取代之前，App 會自動儲存一份目前資料的安全備份檔，檔名含有「before-restore」（App 為韓文介面時為「가져오기전」）。如果還原錯了檔案，再還原那份安全備份檔即可。無法讀取的檔案不會被匯入，目前的資料維持原狀。如果還原途中發生錯誤，App 會回復到安全備份檔。檔案中儲存的貨幣與單位設定也會一併還原。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>換新裝置時，如何轉移紀錄？</summary>
+    <div>
+      <ol>
+        <li>在舊裝置上前往「設定」›「備份」›「分享」，將檔案存到 iCloud 雲碟，或用 AirDrop 傳到新裝置。</li>
+        <li>在新裝置上安裝 CarTally。</li>
+        <li>第一次開啟 App 時，在「語言與單位」畫面點選「開始」。接著「新增車輛」畫面最上方有「還原備份」，在那裡選擇該檔案。如果已經新增了車輛，請改用「設定」›「備份」›「還原」。</li>
+      </ol>
+      <p>App 沒有帳號，所以裝置之間不會自動同步。刪除 App 時，「我的 iPhone › CarTally」內的備份檔也會一併刪除，因此請在刪除 App 或清除裝置之前，先用「分享」匯出。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>我的紀錄儲存在哪裡？</summary>
+    <div>
+      <p>只儲存在您使用的裝置上。App 沒有帳號、沒有伺服器、沒有廣告、沒有分析工具，也不會使用位置資訊，更不會透過網際網路傳送或接收您的資料。只有設定最下方的「隱私權政策」與「支援」兩個連結，會用裝置的瀏覽器開啟對應的頁面。開發者無法查看您的紀錄。詳情請見<a href="privacy.html#zh-Hant">隱私權政策</a>。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>充電單價變動時怎麼辦？</summary>
+    <div>
+      <p>在「設定」›「充電樁設定」中點選該充電樁，修改單價數字後點選「儲存」。新單價從修改當天起適用，過去紀錄的金額仍維持當時的單價。如果只有某一次用了不同的單價，在輸入畫面直接修改單價，只會套用在那一筆紀錄。</p>
+    </div>
+  </details>
+
+  <details>
+    <summary>可以刪除充電樁、付款方式或車輛嗎？</summary>
+    <div>
+      <ul>
+        <li>充電樁可以在「設定」›「充電樁設定」中刪除，付款方式可以在「設定」›「付款方式」中刪除。已刪除的充電樁與付款方式所屬的過去紀錄，會保留當時的名稱。</li>
+        <li>車輛無法刪除。不再使用的車輛，請在設定中開啟該車輛的「車輛已售出」，它會連同紀錄一併保留。若要完全移除車輛資料，請刪除 App。</li>
+      </ul>
+    </div>
+  </details>
+
+  <details>
+    <summary>出現「儲存空間錯誤」畫面，該怎麼辦？</summary>
+    <div>
+      <p>當 App 無法開啟存放紀錄的資料檔時，會出現此畫面。此時 App 不會刪除您的紀錄，而是將資料檔另外保留，並在「已移動的儲存檔」一行顯示檔名。如果複製成功，「可取出的備份檔」一行會顯示「檔案」App › 我的 iPhone › CarTally › 보관_저장파일。</p>
+      <ol>
+        <li>您的紀錄已保留，並未刪除。請不要刪除 App，刪除 App 會一併刪除保留的檔案。</li>
+        <li>請不要刪除「보관_저장파일」資料夾，並請寫信到本頁最下方的信箱。畫面上的「支援」一行也可以連到本頁。</li>
+        <li>如果有備份檔，請在同一畫面下方「備份」區塊的「還原」中選擇它。顯示此畫面期間，App 不會用空資料覆寫今天已存在的備份檔。</li>
+        <li>點選「關閉」即可回到一般畫面。</li>
+      </ol>
+      <p>如果「儲存空間錯誤」畫面顯示「更新前備份失敗 · 確認儲存空間後重新開啟 · 紀錄原樣保留」，表示 App 在將資料檔更新為 1.1 格式之前，無法儲存安全備份，因此沒有開啟資料檔。您的紀錄維持原樣。請清出 iPhone 的儲存空間後，再重新開啟 App。</p>
+    </div>
+  </details>
+
+  <p class="contact">若有這裡沒有涵蓋的問題或意見，請來信：<a href="mailto:piko9388@icloud.com">piko9388@icloud.com</a>。App 沒有傳送您紀錄的功能，所以請一併說明發生問題的畫面與操作步驟。</p>
 </section>
 
 <footer>차부기 · CarTally</footer>
